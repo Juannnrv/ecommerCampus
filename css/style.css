@@ -1,0 +1,22 @@
+@import url(variables.css);
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "EncodeSans-Regular";
+    box-sizing: border-box;
+}
+
+.header {
+    background: red;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.header__information {
+    background: green;
+}
+.header__login {
+    background: violet;
+    border-radius: 50%
+}

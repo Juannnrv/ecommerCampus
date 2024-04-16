@@ -1,0 +1,26 @@
+:root{
+    --color-1: #292526;
+    --color-2: #1B2028;
+    --color-3: #A4AAAD;
+    --color-4: #111111;
+}
+
+@font-face{
+    font-family: "EncodeSands-Regular";
+    src: url("/font/EncodeSansCondensed-Regular.ttf") format(truetype);
+}
+
+@font-face{
+    font-family: "EncodeSands-Medium";
+    src: url("/font/EncodeSansCondensed-Medium.ttf") format(truetype);
+}
+
+@font-face{
+    font-family: "EncodeSands-SemiBold";
+    src: url("/font/EncodeSansCondensed-SemiBold.ttf") format(truetype);
+}
+
+@font-face{
+    font-family: "EncodeSands-Bold";
+    src: url("/font/EncodeSansCondensed-Bold.ttf") format(truetype);
+}
