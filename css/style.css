@@ -1,0 +1,426 @@
+@import url(variables.css);
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "EncodeSands-Regular";
+    box-sizing: border-box;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes grow {
+    from {
+        transform: scale(0.9);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.header {
+    padding: var(--space-layout-padding-lr);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    animation: fadeIn 1s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.header__information span {
+    color: var(--color-1);
+    animation: fadeIn 1s ease-in-out;
+    transition: color 0.3s ease-in-out;
+}
+
+.header__information span:hover {
+    color: var(--color-3);
+}
+
+.header__information span {
+    font-family: "EncodeSands-Bold";
+}
+
+.header__login {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: contain;
+    margin-bottom: 10px;
+    animation: fadeIn 1s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+}
+
+.header__login:hover {
+    transform: scale(1.1);
+}
+
+.header__login img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.nav {
+    padding: var(--space-layout-padding-lr);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    animation: slideIn 1s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav__Search {
+    position: relative;
+}
+
+.nav__Search input {
+    outline: none;
+    width: 260px;
+    height: 45px;
+    border-radius: 10px;
+    padding-left: 2.5rem;
+    padding-right: 1.5rem;
+    border: 1px solid var(--color-3);
+    animation: fadeIn 1s ease-in-out;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.nav__Search input:hover {
+    border-color: var(--color-2);
+}
+
+.search__icon {
+    position: absolute;
+    display: block;
+    bottom: .6rem;
+    left: .8rem;
+    user-select: none;
+    cursor: pointer;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.nav__filter {
+    background: var(--color-1);
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    position: relative;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.nav__filter img {
+    width: 20px;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.main {
+    padding: var(--space-layout-padding-lr);
+    margin-top: 15px;
+    animation: fadeIn 1s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.nav__ul {
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    overflow-x: scroll;
+    animation: fadeIn 1s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav__ul li {
+    list-style: none;
+}
+
+.nav__ul li a {
+    width: 100px;
+    height: 35px;
+    font-family: "EncodeSands-Medium";
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid var(--color-1);
+    color: var(--color-2);
+    background: var(--color-5);
+    transition: background 0.5s linear;
+}
+
+.nav__ul li a span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.nav__ul li a:hover {
+    background: var(--color-1);
+}
+
+.main__article {
+    height: 70vh;
+    margin-top: 15px;
+    margin-bottom: 12vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow-y: scroll;
+    animation: fadeIn 1s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.main__article section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 48%;
+    margin-bottom: 4%;
+    animation: fadeIn 1s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.section__front_page {
+    position: relative;
+    margin-top: 2px;
+    margin-bottom: 10px;
+    border-radius: 14px;
+    width: var(--layout-image-width);
+    height: var(--layout-image-height);
+    overflow: hidden;
+    animation: fadeIn 1s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+}
+
+.section__front_page:hover {
+    transform: scale(1.05);
+}
+
+.section__front_page img {
+    position: absolute;
+}
+
+.section__front_page a img:first-child {
+    width: var(--layout-image-width);
+    height: var(--layout-image-height);
+    object-fit: scale-down;
+}
+
+.section__front_page > img:last-child {
+    top: 10px;
+    right: 10px;
+    background: var(--color-4);
+    border-radius: 100px;
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.section__front_page > img:last-child:hover {
+    background: var(--color-1);
+}
+
+.main__article section h5 {
+    font-family: "EncodeSands-SemiBold";
+    color: var(--color-1);
+    margin-bottom: 9px;
+    animation: fadeIn 1s ease-in-out;
+    transition: color 0.3s ease-in-out;
+}
+
+.main__article section h5:hover {
+    color: var(--color-3);
+}
+
+.main__article section small {
+    color: var(--color-3);
+    animation: fadeIn 1s ease-in-out;
+    transition: color 0.3s ease-in-out;
+}
+
+.main__article section small:hover {
+    color: var(--color-1);
+}
+
+.main__article section h5,
+.main__article section small {
+    align-self: flex-start;
+}
+
+.section__price {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    color: var(--color-2);
+    margin-top: 10px;
+    animation: fadeIn 1s ease-in-out;
+    transition: color 0.3s ease-in-out;
+}
+
+.section__price span {
+    font-family: "EncodeSands-SemiBold";
+    color: var(--color-4);
+}
+
+.section__price span:hover {
+    color: var(--color-3);
+}
+
+.price__score {
+    display: flex;
+    gap: 5px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.main__article section:nth-child(4n+1),
+.main__article section:nth-child(4n+4) {
+    height: 380px;
+}
+
+.main__article section:nth-child(4n-1) {
+    margin-top: -54px;
+}
+
+/* Footer */
+.footer {
+    display: inline-block;
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    padding: var(--space-layout-padding-lr);
+    animation: slideIn 1s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.footer__ul {
+    background: var(--color-4);
+    height: 64px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 40px;
+    box-shadow: 0px 0px 55px 10px white;
+    animation: fadeIn 1s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.footer__ul span{
+    color: var(--color-8);
+    font-family: "EncodeSands-Bold";
+    margin: 2px 2px 0 6px;
+    text-decoration: none;
+}
+
+.footer__ul li {
+    list-style: none;
+    background: var(--color-1);
+    border-radius: 100%;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease-in-out;
+}
+
+.footer__ul li:hover {
+    background: var(--color-2);
+}
+
+.footer__ul li a {
+    display: flex;
+}
+
+.footer__ul li a img {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+}
+
+/* Amimación de carga */
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.carga {
+    position: fixed;
+    top: 50vh;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999; 
+}
+
+.carga ul {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.carga li {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 5px solid var(--color-1);
+    border-radius: 100%;
+}
+
+.carga li:nth-child(1) {
+    margin: -30px 0 0 -30px;
+    border-top-color: var(--color-4);
+    width: 60px;
+    height: 60px;
+    animation: loading 3s infinite linear;
+}
+
+.carga li:nth-child(2) {
+    margin: -20px 0 0 -20px;
+    border-top-color: var(--color-4);
+    width: 40px;
+    height: 40px;
+    animation: loading 2s infinite linear;
+}
+
+.carga li:nth-child(3) {
+    margin: -10px 0 0 -10px;
+    border-top-color: var(--color-4);
+    width: 20px;
+    height: 20px;
+    animation: loading 1s infinite linear;
+}
