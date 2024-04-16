@@ -3,24 +3,26 @@
     --color-2: #1B2028;
     --color-3: #A4AAAD;
     --color-4: #111111;
+    --space-layout-padding-lr: 0px 15px;
+    --space-layout-padding-t: 5px;
 }
 
 @font-face{
     font-family: "EncodeSands-Regular";
-    src: url("/font/EncodeSansCondensed-Regular.ttf") format(truetype);
+    src: url("/storage/font/EncodeSansCondensed-Regular.ttf") format(truetype);
 }
 
 @font-face{
     font-family: "EncodeSands-Medium";
-    src: url("/font/EncodeSansCondensed-Medium.ttf") format(truetype);
+    src: url("/storage/font/EncodeSansCondensed-Medium.ttf") format(truetype);
 }
 
 @font-face{
     font-family: "EncodeSands-SemiBold";
-    src: url("/font/EncodeSansCondensed-SemiBold.ttf") format(truetype);
+    src: url("/storage/font/EncodeSansCondensed-SemiBold.ttf") format(truetype);
 }
 
 @font-face{
     font-family: "EncodeSands-Bold";
-    src: url("/font/EncodeSansCondensed-Bold.ttf") format(truetype);
+    src: url("/storage/font/EncodeSans-Bold.ttf") format(truetype);
 }
