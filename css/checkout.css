@@ -1,0 +1,257 @@
+@import url(variables.css);
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "EncodeSands-Regular";
+    box-sizing: border-box;
+}
+
+.main, header {
+    /* background: violet; */
+    padding: var(--space-layout-padding-lr);
+    margin-top: var(--space-layout-padding-t);
+}
+hr{
+    color: var(--color-6);
+    opacity: 20%;
+    margin: 24px 0 24px 0;
+}
+
+
+/* Header */
+.header__top {
+    /* background: red; */
+    height: 64px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    font-size: 16px;
+    font-family: "EncodeSands-SemiBold";
+}
+
+
+/* Main */
+.main__section{
+    width: 100%;
+}
+.article__clothes {
+    height: 310px;
+    overflow: scroll;
+    width: 100%;
+    /* height: 50%; */
+    overflow: scroll;
+}
+.clothes__product {
+    /* background: green; */
+    overflow: scroll;
+    margin-bottom: 24px;
+}
+.product__card {
+    display: flex;
+    justify-content: space-between;
+}
+.card__img {
+    width: var(--layout-imagen-width-checkout);
+    height: var(--layout-imagen-height-checkout);
+    overflow: hidden;
+}
+.card__img img {
+    border-radius: 15px;
+    width: var(--layout-imagen-width-checkout);
+    height: var(--layout-imagen-height-checkout);
+    object-fit: cover;
+}
+.card__info {
+    /* background: blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 80px;
+}
+.info__name{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.card__info  span,
+.info__name p {
+    font-family: 'EncodeSans-SemiBold', sans-serif;
+    font-size: 14px;
+}
+.info__name small{
+    font-size: 10px;
+    font-family: "EncodeSands-Regular";
+    color: var(--color-3);
+}
+.card__select {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.card__quantity{
+    width: 85px;
+    height: 28px;
+    background: var(--color-1);
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+}
+.card__quantity span{
+    font-family: 'EncodeSans-SemiBold', sans-serif;
+    font-weight: 800;
+    color: var(--color-5);
+    padding-top: 2.5px;
+
+}
+
+.shipping p{
+    color: var(--color-2);
+    font-size: 14px;
+    font-family: 'EncodeSans-Regular', sans-serif;
+}
+h2 {
+    font-family: "EncodeSands-SemiBold";
+    font-size: 14px;
+    margin: 2px 0 16px 0;
+    font-weight: 100;
+    color: var(--color-1);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+.dropdown__button {
+    background-color: var(--color-7);
+    border-radius: 5px;
+    width: 100%;
+    color: var(--color-1);
+    padding: 16px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--color-5);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.dropdown-content div:last-child{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.dropdown-content div {
+    color: var(--color-1);
+    padding: 12px 16px;
+    display: block;
+}
+.dropdown-content div:hover {
+    background-color: var(--color-1);
+    color: var(--color-5);
+    cursor: pointer;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+    width: 100%
+}
+
+.dropdown:hover .dropdown__button {
+    background-color: var(--color-1);
+    color: var(--color-5);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.dropdown:hover .dropdown__button .shopping__option{
+    filter: invert(1);
+}
+
+
+/* .paymethod {
+    position: relative;
+    background: var(--color-7); 
+    padding: 16px 20px 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+.paymethod__card {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+.paymethod__card p{
+    align-self: center;
+}
+.paymethod__options{
+    position: absolute; 
+    z-index: 10; 
+    background: var(--color-7); 
+    padding: 16px 20px 16px 29px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    width: 100%;
+} */
+
+.built{
+    color: var(--color-2);
+}
+.built span {
+    font-family: "EncodeSands-SemiBold";
+    font-weight: 100;
+    
+}
+.built__total {
+    display: flex;
+    justify-content: space-between;
+    margin: 24px 0 16px 0;
+}   
+.built__fee {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+.built__subtotal {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* Footer */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); 
+    width: 335px; 
+    height: 56px;
+    background: var(--color-1);
+    border-radius: 40px;
+    font-size: 14px;
+    font-family: "EncodeSands-Bold";
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer a{
+    text-decoration: none;
+    color: var(--color-5);
+}
+
+
