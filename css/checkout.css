@@ -1,0 +1,303 @@
+@import url(variables.css);
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "EncodeSands-Regular";
+    box-sizing: border-box;
+}
+
+.main,
+header {
+    padding: var(--space-layout-padding-lr);
+    margin-top: var(--space-layout-padding-t);
+}
+
+hr {
+    color: var(--color-6);
+    opacity: 20%;
+    margin: 24px 0 24px 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Header */
+.header__top {
+    height: 64px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    font-size: 16px;
+    font-family: "EncodeSands-SemiBold";
+    transition: all 0.3s ease-in-out;
+}
+
+/* Main */
+.main__section {
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.article__clothes {
+    height: 310px;
+    overflow-y: scroll;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.clothes__product {
+    margin-bottom: 24px;
+    transition: all 0.3s ease-in-out;
+}
+
+.product__card {
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.3s ease-in-out;
+}
+
+.card__img {
+    width: var(--layout-imagen-width-checkout);
+    height: var(--layout-imagen-height-checkout);
+    overflow: hidden;
+}
+
+.card__img img {
+    border-radius: 15px;
+    width: var(--layout-imagen-width-checkout);
+    height: var(--layout-imagen-height-checkout);
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card__img img:hover {
+    transform: scale(1.1);
+}
+
+.card__info {
+    display: flex;
+    width: 185px;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease-in-out;
+}
+
+.info__name {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.info__name a {
+    color: var(--color-1);
+    font-family: 'EncodeSans-SemiBold', sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+
+}
+
+.card__info span {
+    margin-top: 5px;
+}
+.card__info span,
+.info__name p {
+    font-family: 'EncodeSans-SemiBold', sans-serif;
+    font-size: 14px;
+    transition: color 0.3s ease-in-out;
+}
+
+.info__name small {
+    font-size: 10px;
+    font-family: "EncodeSands-Regular";
+    color: var(--color-3);
+}
+
+.card__select {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    transition: all 0.3s ease-in-out;
+}
+
+.card__quantity {
+    width: 85px;
+    height: 28px;
+    background: var(--color-1);
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.card__quantity span {
+    font-family: 'EncodeSans-SemiBold', sans-serif;
+    font-weight: 800;
+    color: var(--color-5);
+    padding-top: 2.5px;
+}
+
+.shipping p {
+    color: var(--color-2);
+    font-size: 14px;
+    font-family: 'EncodeSans-Regular', sans-serif;
+    transition: color 0.3s ease-in-out;
+}
+
+h2 {
+    font-family: "EncodeSands-SemiBold";
+    font-size: 14px;
+    margin: 2px 0 16px 0;
+    font-weight: 100;
+    color: var(--color-1);
+    transition: color 0.3s ease-in-out;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.dropdown__button {
+    background-color: var(--color-7);
+    border-radius: 5px;
+    width: 100%;
+    color: var(--color-1);
+    padding: 16px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--color-5);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.dropdown-content div:last-child {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.dropdown-content div {
+    color: var(--color-1);
+    padding: 12px 16px;
+    display: block;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.dropdown-content div:hover {
+    background-color: var(--color-1);
+    color: var(--color-5);
+    cursor: pointer;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    width: 100%;
+}
+
+.dropdown:hover .dropdown__button {
+    background-color: var(--color-1);
+    color: var(--color-5);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.dropdown:hover .dropdown__button .shopping__option {
+    filter: invert(1);
+}
+/* .paymethod {
+    position: relative;
+    background: var(--color-7); 
+    padding: 16px 20px 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+.paymethod__card {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+.paymethod__card p{
+    align-self: center;
+}
+.paymethod__options{
+    position: absolute; 
+    z-index: 10; 
+    background: var(--color-7); 
+    padding: 16px 20px 16px 29px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    width: 100%;
+} */
+
+.built{
+    color: var(--color-2);
+}
+.built span {
+    font-family: "EncodeSands-SemiBold";
+    font-weight: 100;
+    
+}
+.built__total {
+    display: flex;
+    justify-content: space-between;
+    margin: 24px 0 16px 0;
+}   
+.built__fee {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+.built__subtotal {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 70px;
+}
+
+/* Footer */
+.footer {
+    position: fixed;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 335px;
+    height: 56px;
+    background: var(--color-1);
+    border-radius: 40px;
+    font-size: 14px;
+    font-family: "EncodeSands-Bold";
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer a {
+    text-decoration: none;
+    color: var(--color-5);
+    transition: color 0.3s ease-in-out;
+}
+
+.footer:hover {
+    transition: all 0.3s ease-in-out;
+}
