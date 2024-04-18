@@ -6,26 +6,26 @@
     --color-5: #FFFF;
     --space-layout-padding-lr: 0px 15px;
     --space-layout-padding-t: 5px;
-    --layout-image-width:154px;
-    --layout-image-height:211px;
+    --layout-image-width:100%;
+    --layout-image-height:350px;
 }
 
 @font-face{
     font-family: "EncodeSands-Regular";
-    src: url("/storage/font/EncodeSansCondensed-Regular.ttf") format(truetype);
+    src: url("../storage/font/EncodeSansCondensed-Regular.ttf") format(truetype);
 }
 
 @font-face{
     font-family: "EncodeSands-Medium";
-    src: url("/storage/font/EncodeSansCondensed-Medium.ttf") format(truetype);
+    src: url("../storage/font/EncodeSansCondensed-Medium.ttf") format(truetype);
 }
 
 @font-face{
     font-family: "EncodeSands-SemiBold";
-    src: url("/storage/font/EncodeSansCondensed-SemiBold.ttf") format(truetype);
+    src: url("../storage/font/EncodeSansCondensed-SemiBold.ttf") format(truetype);
 }
 
 @font-face{
     font-family: "EncodeSands-Bold";
-    src: url("/storage/font/EncodeSans-Bold.ttf") format(truetype);
+    src: url("../storage/font/EncodeSans-Bold.ttf") format(truetype);
 }
