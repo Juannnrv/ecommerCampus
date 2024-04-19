@@ -40,7 +40,7 @@
     position: absolute;
     display: flex;
     justify-content: space-between;
-    padding: 5px 15px 0 15px;
+    padding: 15px 15px 0 15px;
 }
 
 /* Article detail */
@@ -48,7 +48,7 @@
     /* background: red; */
 }
 .detail__head {
-    margin-top: 32px;
+    margin-top: 20px;
     /* background: green; */
     display: flex;
     justify-content: space-between;
@@ -56,9 +56,7 @@
 }
 .detail__head h1{
     font-family: "EncodeSands-SemiBold";
-    font-size: 24px;
-    width: 154px;
-    height: 60px;
+    font-size: 28px;
 }
 .product__select {
     display: flex;
@@ -84,8 +82,8 @@
 /* Information */
 .product__information {
     /* background: violet; */
-    width: 75%;
-    margin-top: 15px;
+    width: 85%;
+    margin-top: 10px;
     color: var(--color-3);
 }
 .product__information strong{
@@ -110,15 +108,10 @@
     margin-top: 5px;
     font-family: "EncodeSands-Bold";
 }
-.product__size h5,
-.product__color h5{
-    padding-bottom: 10px;
-}
-
 /* Footer */
 .footer {
     position: fixed;
-    bottom: 35px;
+    bottom: 10px;
     width: 100%;
     padding: var(--space-layout-padding-lr);
 }
@@ -137,6 +130,8 @@
 }
 .footer__ul li a{
     display: flex;
+    font-family: "EncodeSands-Bold";
+    font-weight: 900;
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -146,5 +141,9 @@
 }
 .footer__ul li a img{
     width: 25px;
+}
+.footer__ul li a sub{
+    text-decoration: line-through;
+    font-weight: 10;
 }
 
