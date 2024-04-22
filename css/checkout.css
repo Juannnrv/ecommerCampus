@@ -119,14 +119,19 @@ h2 {
     margin-bottom: 16px;
 }
 .paymethod {
+    background: var(--color-7); 
+    padding: 16px 20px 16px 20px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-bottom: 24px;
 }
 .paymethod__card {
     display: flex;
     flex-direction: row;
     gap: 12px;
+}
+.paymethod__card p{
+    align-self: center;
 }
 .total {
     display: flex;
