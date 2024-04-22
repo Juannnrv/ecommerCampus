@@ -147,7 +147,9 @@ h2 {
 /* Footer */
 .footer {
     position: fixed;
-    transform: translate(10%, -50%);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); 
     width: 335px; 
     height: 56px;
     background: var(--color-1);
@@ -156,6 +158,9 @@ h2 {
     font-size: 14px;
     font-family: "EncodeSands-Bold";
     text-align: center;
-    align-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 
