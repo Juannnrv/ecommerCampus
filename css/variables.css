@@ -12,6 +12,10 @@
     /* Detail */
     --layout-image-width-detail: 100%;
     --layout-image-height-detail: 385px;
+
+    /* Checkout */
+    --layout-imagen-width-checkout:75px;
+    --layout-imagen-height-checkout:75px;
 }
 
 @font-face{
