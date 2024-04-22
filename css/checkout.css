@@ -11,9 +11,11 @@
     padding: var(--space-layout-padding-lr);
     margin-top: var(--space-layout-padding-t);
 }
-/* hr{
-    margin: 24px 0; 
-} */
+hr{
+    color: var(--color-6);
+    opacity: 20%;
+    margin: 24px 0 24px 0;
+}
 
 
 /* Header */
@@ -25,6 +27,8 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 24px;
+    font-size: 16px;
+    font-family: "EncodeSands-SemiBold";
 }
 
 
