@@ -142,6 +142,9 @@
 .footer__ul li a img{
     width: 25px;
 }
+.footer__ul span sub {
+    font-family: "EncodeSands-Medium";
+}
 .footer__ul li a sub{
     text-decoration: line-through;
     font-weight: 10;
