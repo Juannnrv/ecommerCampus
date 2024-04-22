@@ -5,3 +5,135 @@
     font-family: "EncodeSands-Regular";
     box-sizing: border-box;
 }
+
+.main, header {
+    /* background: violet; */
+    padding: var(--space-layout-padding-lr);
+    margin-top: var(--space-layout-padding-t);
+}
+/* hr{
+    margin: 24px 0; 
+} */
+
+
+/* Header */
+.header__top {
+    /* background: red; */
+    height: 64px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+
+/* Main */
+.main__section{
+    width: 100%;
+}
+.article__clothes {
+    width: 100%;
+    height: 50%;
+    overflow: scroll;
+}
+.clothes__product {
+    /* background: green; */
+    overflow: scroll;
+    margin-bottom: 24px;
+}
+.product__card {
+    display: flex;
+    justify-content: space-between;
+}
+.card__img {
+    width: var(--layout-imagen-width-checkout);
+    height: var(--layout-imagen-height-checkout);
+    overflow: hidden;
+}
+.card__img img {
+    border-radius: 15px;
+    width: var(--layout-imagen-width-checkout);
+    height: var(--layout-imagen-height-checkout);
+    object-fit: cover;
+}
+.card__info {
+    /* background: blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 80px;
+}
+.info__name{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.card__info  span,
+.info__name p {
+    font-family: 'EncodeSans-SemiBold', sans-serif;
+    font-size: 14px;
+}
+.info__name small{
+    font-size: 10px;
+    font-family: "EncodeSands-Regular";
+    color: var(--color-3);
+}
+.card__select {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.shipping p{
+    color: var(--color-2);
+    font-size: 14px;
+    font-family: 'EncodeSans-Regular', sans-serif;
+}
+h2 {
+    font-family: "EncodeSands-SemiBold";
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+.paymethod {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 24px;
+}
+.paymethod__card {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+.total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}   
+.fee {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+.subtotal {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* Footer */
+.footer {
+    position: fixed;
+    transform: translate(10%, -50%);
+    width: 335px; 
+    height: 56px;
+    background: var(--color-1);
+    border-radius: 40px;
+    color: var(--color-5);
+    font-size: 14px;
+    font-family: "EncodeSands-Bold";
+    text-align: center;
+    align-content: center;
+}
+
