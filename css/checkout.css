@@ -118,7 +118,7 @@ hr{
 h2 {
     font-family: "EncodeSands-SemiBold";
     font-size: 14px;
-    margin: 10px 0 16px 0;
+    margin: 2px 0 16px 0;
     font-weight: 100;
 }
 
@@ -206,17 +206,22 @@ h2 {
     margin-bottom: 24px;
     width: 100%;
 } */
-.total {
+
+.built span {
+    font-family: "EncodeSands-SemiBold";
+    font-weight: 100;
+}
+.built__total {
     display: flex;
     justify-content: space-between;
     margin: 24px 0 16px 0;
 }   
-.fee {
+.built__fee {
     display: flex;
     justify-content: space-between;
     margin-bottom: 16px;
 }
-.subtotal {
+.built__subtotal {
     display: flex;
     justify-content: space-between;
 }
