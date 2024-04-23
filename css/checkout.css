@@ -120,6 +120,7 @@ h2 {
     font-size: 14px;
     margin: 2px 0 16px 0;
     font-weight: 100;
+    color: var(--color-1);
 }
 
 .dropdown {
@@ -207,9 +208,13 @@ h2 {
     width: 100%;
 } */
 
+.built{
+    color: var(--color-2);
+}
 .built span {
     font-family: "EncodeSands-SemiBold";
     font-weight: 100;
+    
 }
 .built__total {
     display: flex;
