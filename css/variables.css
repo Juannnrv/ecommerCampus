@@ -1,15 +1,17 @@
 :root{
-    /* --color-1: #292526; */
-    --color-1: red;
-    /* --color-2: #1B2028; */
-    --color-2: blue;
-    /* --color-3: #A4AAAD; */
-    --color-3: green;
+    --color-1: rgb(25, 205, 140);
+    --color-2: #1B2028;
+    --color-3: #A4AAAD;
     /* --color-4: #111111; */
-    --color-4: violet;
+    --color-4: rgb(72, 72, 72);
     --color-5: #FFFFFF;
     --color-6: #EDEDED;
     --color-7: #F6F6F6;
+
+
+    /* --color-8: rgb(25, 205, 140); */
+
+    
     --space-layout-padding-lr: 0px 15px;
     --space-layout-padding-t: 5px;
     --layout-image-width:100%;

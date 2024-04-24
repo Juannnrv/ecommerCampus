@@ -15,8 +15,9 @@
     align-items: center;
     height: 60px;
 }
-.header__information{
-    /* background: green; */
+.header__information span {
+    color: var(--color-1)
+
 }
 .header__information span{
     font-family: "EncodeSands-Bold";
@@ -26,7 +27,8 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    overflow: hidden;
+    overflow: contain;
+    margin-bottom: 10px;
 }
 .header__login img {
     width: 100%;
@@ -108,8 +110,8 @@
     gap: 5px;
     padding: 5px;
     border-radius: 8px;
-    border: 1px solid var(--color-3);
-    color: var(--color-1);
+    border: 1px solid var(--color-2);
+    color: var(--color-2);
     background: var(--color-5);
 }
 .nav__ul li a:hover{
@@ -148,6 +150,7 @@
     height: var(--layout-image-height);
     overflow: hidden;
 }
+
 .section__front_page img{
     position: absolute;
 }
@@ -167,7 +170,7 @@
 }
 .main__article section h5{
     font-family: "EncodeSands-SemiBold";
-    color: var(--color-2);
+    color: var(--color-1);
     margin-bottom: 9px;
 }
 .main__article section small {
@@ -186,6 +189,7 @@
 }
 .section__price span{
     font-family: "EncodeSands-SemiBold";
+    color: var(--color-4);
 }
 .price__score{
     display: flex;
