@@ -27,6 +27,9 @@ export const titleProductDetail = async ({data : dataUpdate} = res  ) => {
             if (description.length > 150) {
                 description = description.slice(0, 150)+'  <strong id="text">Read More. . .</strong>';
             }
+            else {
+                description = description;
+            }
 
             return description;
         }
