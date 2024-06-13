@@ -163,7 +163,7 @@
 .section__front_page a img:first-child{
     width: var(--layout-image-width);
     height: var(--layout-image-height);
-    object-fit: cover;
+    object-fit: scale-down;
 }
 .section__front_page > img:last-child{
     top: 10px;
