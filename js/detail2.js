@@ -1,17 +1,25 @@
 
-import { headers } from "../components/env.js"
+import { galleryCategory } from "./components/gallery.js";
+import { getProductById } from "./module/detail.js";
 
-export const getAllProductById = async ( {id : idCategory} ) => {
-    console.log("Waiting...");
-    console.log( idCategory )
-    const url = `https://real-time-amazon-data.p.rapidapi.com/search?query=${text}&page=1&country=US&sort_by=RELEVANCE&category_id=${idCategory}&product_condition=ALL`;
-    const options = {
-        method: 'GET',
-        headers
-    };
+let main__section_gallery = document.querySelector("#main__section_gallery");
 
-    let res = await fetch(url, options);
-    let data = await res.json();
-    return data;
-
-}
+addEventListener("DOMContentLoaded", async(e)=>{
+    let params = new URLSearchParams(location.search);
+    let id = params.get('id');
+    if(!localStorage.getItem(id)) localStorage.setItem(id, JSON.stringify(await getProductById({id})));
+    main__section_gallery.innerHTML = await galleryCategory(JSON.parse(localStorage.getItem(id)))
+    // let {data} = res;
+    // let {
+    //     category_path,
+    //     about_product,
+    //     product_details,
+    //     product_information,
+    //     product_photos,
+    //     product_variations,
+    //     rating_distribution,
+    //     review_aspects,
+    //     ...dataUpdate
+    // } = data;
+    // console.log(dataUpdate);
+})
