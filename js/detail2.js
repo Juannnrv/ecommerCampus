@@ -1,7 +1,7 @@
 
 import { galleryCategory } from "./components/gallery.js";
-import { descriptionProductDetail, titleProductDetail } from "./components/section.js";
-import { getProductById } from "./module/detail.js";
+import { descriptionProductDetail, titleProductDetail, valueProductDetail } from "./components/section.js";
+import { getProductById } from "./module/detail.js";    
 
 let main__section_gallery = document.querySelector("#main__section_gallery");
 let main__section_tittle = document.querySelector("#main__section_tittle");
@@ -18,6 +18,7 @@ addEventListener("DOMContentLoaded", async(e)=>{
     main__section_gallery.innerHTML = await galleryCategory(info);
     main__section_tittle.innerHTML = await titleProductDetail(info);
     main__section_description.innerHTML = await descriptionProductDetail(info);
+    footer__ul_cost.innerHTML = await valueProductDetail(info);
 
     // let {data} = res;
     // let {

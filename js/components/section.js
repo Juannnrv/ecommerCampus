@@ -38,3 +38,24 @@ export const descriptionProductDetail = async ({data : dataUpdate} = res) => {
     
 }
 
+export const valueProductDetail = async ({data : dataUpdate} = res) => {
+
+    const originalPrice = async() => {
+        if (dataUpdate.product_original_price === null) {
+            return '';
+        }
+        else {
+            return dataUpdate.product_original_price;
+        }
+    }
+
+    return /*html*/`
+    <li>
+        <a href="./checkout.html">
+            <img src="../storage/img/shoppingcar.svg">
+            <span>Add to Cart | ${dataUpdate.product_price} <sub>${await originalPrice()}</sub></span>
+        </a>
+    </li>
+    `;
+}
+
