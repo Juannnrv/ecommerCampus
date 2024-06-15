@@ -17,3 +17,24 @@ export const titleProductDetail = async ({data : dataUpdate} = res  ) => {
         </div>
     </article>`;
 }
+
+export const descriptionProductDetail = async ({data : dataUpdate} = res) => {
+    let descripcion = async() => {
+        let text = dataUpdate.product_description;
+        let description = text.toString();
+
+        if (description.length > 150) {
+            description = description.slice(0, 150)+'  <strong id="text">Read More. . .</strong>';
+        }
+
+        return description;
+    }
+
+    return /*html*/`
+    <article class="product__information">
+        <p id ="parrafo">${await descripcion()}</p>
+    </article>
+    `;
+    
+}
+
