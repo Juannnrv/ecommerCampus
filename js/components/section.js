@@ -19,7 +19,8 @@ export const titleProductDetail = async ({data : dataUpdate} = res  ) => {
 }
 
 export const descriptionProductDetail = async ({data : dataUpdate} = res) => {
-    let descripcion = async() => {
+    if (dataUpdate.product_description !== null){
+        let descripcion = async() => {
         let text = dataUpdate.product_description;
         let description = text.toString();
 
@@ -34,7 +35,10 @@ export const descriptionProductDetail = async ({data : dataUpdate} = res) => {
     <article class="product__information">
         <p id ="parrafo">${await descripcion()}</p>
     </article>
-    `;
+    `;}
+    else {
+        return "";
+    }
     
 }
 
