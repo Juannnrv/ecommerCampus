@@ -32,6 +32,18 @@ addEventListener("DOMContentLoaded", async(e)=>{
     //     ...dataUpdate
     // } = data;
     // console.log(dataUpdate);
+
+    let menos = document.querySelector("#menos");
+    let num = document.querySelector("#num");
+    let mas = document.querySelector("#mas");
+
+    menos.addEventListener("click", (e) => {
+        if(num.textContent > 1) num.textContent = parseInt(num.textContent) - 1;
+    })
+
+    mas.addEventListener("click", (e) => {
+        num.textContent = parseInt(num.textContent) + 1;
+    })
     
     let strong_description = document.querySelector("#text");
     let parrafo = document.querySelector("#parrafo"); 
