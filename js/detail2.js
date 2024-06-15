@@ -1,11 +1,12 @@
 
 import { galleryCategory } from "./components/gallery.js";
-import { descriptionProductDetail, titleProductDetail, valueProductDetail } from "./components/section.js";
-import { getProductById } from "./module/detail.js";    
+import { descriptionProductDetail, sizeProductDetail, titleProductDetail, valueProductDetail } from "./components/section.js";
+import { getProductById } from "./module/detail.js";
 
 let main__section_gallery = document.querySelector("#main__section_gallery");
 let main__section_tittle = document.querySelector("#main__section_tittle");
 let main__section_description= document.querySelector("#main__section_description");
+let main__section_custom = document.querySelector("#main__section_custom")
   
 
 addEventListener("DOMContentLoaded", async(e)=>{
@@ -18,6 +19,7 @@ addEventListener("DOMContentLoaded", async(e)=>{
     main__section_gallery.innerHTML = await galleryCategory(info);
     main__section_tittle.innerHTML = await titleProductDetail(info);
     main__section_description.innerHTML = await descriptionProductDetail(info);
+    main__section_custom.innerHTML = await sizeProductDetail(info);
     footer__ul_cost.innerHTML = await valueProductDetail(info);
 
     // let {data} = res;
@@ -33,6 +35,36 @@ addEventListener("DOMContentLoaded", async(e)=>{
     //     ...dataUpdate
     // } = data;
     // console.log(dataUpdate);
+
+    let s = document.querySelector("#s")
+    let m = document.querySelector("#m")
+    let l = document.querySelector("#l")
+    let xl = document.querySelector("#xl")
+
+    s.addEventListener("click", (e) => {
+        s.src="../storage/img/snuevo.svg"
+        m.src="../storage/img/m.svg"
+        l.src="../storage/img/l.svg"
+        xl.src="../storage/img/xl.svg"
+    })
+    m.addEventListener("click", (e) => {
+        m.src="../storage/img/mnuevo.svg"
+        s.src="../storage/img/s.svg"
+        l.src="../storage/img/l.svg"
+        xl.src="../storage/img/xl.svg"
+    })
+    l.addEventListener("click", (e) => {
+        l.src="../storage/img/lnuevo.svg"
+        s.src="../storage/img/s.svg"
+        m.src="../storage/img/m.svg"
+        xl.src="../storage/img/xl.svg"
+    })
+    xl.addEventListener("click", (e) => {
+        xl.src="../storage/img/xlnuevo.svg"
+        s.src="../storage/img/s.svg"
+        m.src="../storage/img/m.svg"
+        l.src="../storage/img/l.svg"
+    })
 
     let menos = document.querySelector("#menos");
     let num = document.querySelector("#num");
