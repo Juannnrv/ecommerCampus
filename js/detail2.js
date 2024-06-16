@@ -12,7 +12,6 @@ let main__section_custom = document.querySelector("#main__section_custom")
 addEventListener("DOMContentLoaded", async(e)=>{
     let params = new URLSearchParams(location.search);
     let id = params.get('id');
-    console.log(params.get('id'));
     if(!localStorage.getItem(id)) localStorage.setItem(id, JSON.stringify(await getProductById({id})));
 
     let info = JSON.parse(localStorage.getItem(id));
