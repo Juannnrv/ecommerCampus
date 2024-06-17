@@ -28,3 +28,20 @@ export const getAllCategory = async() => {
     let data = await res.json();
     return data;
 }
+
+export const getRamdonIndex = async(page = 700) => {
+    console.log("Waiting...")
+    page = Math.random()*(page/20);
+    page = parseInt(Math.round(page));
+    if (!page) page = 1;
+
+    const url = `https://real-time-amazon-data.p.rapidapi.com/search?query=Aesthetic-men&page=${page}&country=US&sort_by=RELEVANCE&category_id=aps&product_condition=NEW`;
+    const options = {
+        method: "GET",
+        headers
+    };
+
+    let res = await fetch(url, options);
+    let data = await res.json();
+    return data;
+} 

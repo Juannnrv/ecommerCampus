@@ -18,29 +18,29 @@ export const titleProductDetail = async ({data : dataUpdate} = res  ) => {
     </article>`;
 }
 
-export const descriptionProductDetail = async ({data : dataUpdate} = res) => {
-    if (dataUpdate.product_description !== null){
-        let descripcion = async() => {
-        let text = dataUpdate.product_description;
-        let description = text.toString();
+    export const descriptionProductDetail = async ({data : dataUpdate} = res) => {
+        if (dataUpdate.product_description !== null){
+            let descripcion = async() => {
+            let text = dataUpdate.product_description;
+            let description = text.toString();
 
-        if (description.length > 150) {
-            description = description.slice(0, 150)+'  <strong id="text">Read More. . .</strong>';
+            if (description.length > 150) {
+                description = description.slice(0, 150)+'  <strong id="text">Read More. . .</strong>';
+            }
+
+            return description;
         }
 
-        return description;
+        return /*html*/`
+        <article class="product__information">
+            <p id ="parrafo">${await descripcion()}</p>
+        </article>
+        `;}
+        else {
+            return "";
+        }
+        
     }
-
-    return /*html*/`
-    <article class="product__information">
-        <p id ="parrafo">${await descripcion()}</p>
-    </article>
-    `;}
-    else {
-        return "";
-    }
-    
-}
 
 export const sizeProductDetail = async({data : dataUpdate} = res) => {
 
