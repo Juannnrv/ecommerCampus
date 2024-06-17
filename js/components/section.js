@@ -81,7 +81,7 @@ export const valueProductDetail = async ({data : dataUpdate} = res) => {
     <li>
         <a href="./checkout.html?id=${dataUpdate.asin}">
             <img src="../storage/img/shoppingcar.svg">
-            <span>Add to Car | ${dataUpdate.product_price} <sub>${await originalPrice()}</sub></span>
+            <span id="precio" >Add to Car | ${dataUpdate.product_price} <sub>${await originalPrice()}</sub></span>
         </a>
     </li>
     `;

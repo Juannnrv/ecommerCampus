@@ -3,6 +3,7 @@ import { galleryCategory } from "./components/gallery.js";
 import { descriptionProductDetail, sizeProductDetail, titleProductDetail, valueProductDetail } from "./components/section.js";
 import { getProductById } from "./module/detail.js";
 
+
 let main__section_gallery = document.querySelector("#main__section_gallery");
 let main__section_tittle = document.querySelector("#main__section_tittle");
 let main__section_description= document.querySelector("#main__section_description");
@@ -68,14 +69,36 @@ addEventListener("DOMContentLoaded", async(e)=>{
     let menos = document.querySelector("#menos");
     let num = document.querySelector("#num");
     let mas = document.querySelector("#mas");
+    let precio = document.querySelector("#precio")
 
     menos.addEventListener("click", (e) => {
         if(num.textContent > 1) num.textContent = parseInt(num.textContent) - 1;
-    })
+        let productPrice = info.data.product_price ? parseFloat(info.data.product_price.replace("$", "")) : 0;
+        let productPriceOriginal = info.data.product_original_price ? parseFloat(info.data.product_original_price.replace("$", "")) : 0;
+        let totalPrice = productPrice * parseInt(num.textContent);
+        let totalPriceOriginal = productPriceOriginal * parseInt(num.textContent);
+        console.log(totalPriceOriginal);
+        
+        let originalPriceDisplay = !isNaN(totalPriceOriginal) && totalPriceOriginal > 0 ? `$${totalPriceOriginal.toFixed(2)}` : '';
+        
+        precio.innerHTML = /*html*/`
+        <span id="precio" >Add to Cart | $${totalPrice.toFixed(2)} <sub>${originalPriceDisplay}</sub></span>`;
+    });
 
     mas.addEventListener("click", (e) => {
         num.textContent = parseInt(num.textContent) + 1;
-    })
+        let productPrice = info.data.product_price ? parseFloat(info.data.product_price.replace("$", "")) : 0;
+        let productPriceOriginal = info.data.product_original_price ? parseFloat(info.data.product_original_price.replace("$", "")) : 0;
+        let totalPrice = productPrice * parseInt(num.textContent);
+        let totalPriceOriginal = productPriceOriginal * parseInt(num.textContent);
+        console.log(totalPriceOriginal);
+        
+        
+        let originalPriceDisplay = !isNaN(totalPriceOriginal) && totalPriceOriginal > 0 ? `$${totalPriceOriginal.toFixed(2)}` : '';
+        
+        precio.innerHTML = /*html*/`
+        <span id="precio" >Add to Cart | $${totalPrice.toFixed(2)} <sub>${originalPriceDisplay}</sub></span>`;
+    });
     
     let strong_description = document.querySelector("#text");
     let parrafo = document.querySelector("#parrafo"); 
