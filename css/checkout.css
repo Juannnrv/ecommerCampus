@@ -1,26 +1,26 @@
 @import url(variables.css);
-*{
+* {
     padding: 0;
     margin: 0;
     font-family: "EncodeSands-Regular";
     box-sizing: border-box;
 }
 
-.main, header {
-    /* background: violet; */
+.main,
+header {
     padding: var(--space-layout-padding-lr);
     margin-top: var(--space-layout-padding-t);
 }
-hr{
+
+hr {
     color: var(--color-6);
     opacity: 20%;
     margin: 24px 0 24px 0;
+    transition: opacity 0.3s ease-in-out;
 }
-
 
 /* Header */
 .header__top {
-    /* background: red; */
     height: 64px;
     display: flex;
     flex-direction: row;
@@ -29,69 +29,94 @@ hr{
     margin-bottom: 24px;
     font-size: 16px;
     font-family: "EncodeSands-SemiBold";
+    transition: all 0.3s ease-in-out;
 }
 
+.header__top:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease-in-out;
+}
 
 /* Main */
-.main__section{
+.main__section {
     width: 100%;
+    transition: all 0.3s ease-in-out;
 }
+
 .article__clothes {
     height: 310px;
     overflow: scroll;
     width: 100%;
-    /* height: 50%; */
     overflow: scroll;
+    transition: all 0.3s ease-in-out;
 }
+
 .clothes__product {
-    /* background: green; */
     overflow: scroll;
     margin-bottom: 24px;
+    transition: all 0.3s ease-in-out;
 }
+
 .product__card {
     display: flex;
     justify-content: space-between;
+    transition: all 0.3s ease-in-out;
 }
+
 .card__img {
     width: var(--layout-imagen-width-checkout);
     height: var(--layout-imagen-height-checkout);
     overflow: hidden;
 }
+
 .card__img img {
     border-radius: 15px;
     width: var(--layout-imagen-width-checkout);
     height: var(--layout-imagen-height-checkout);
     object-fit: cover;
+    transition: transform 0.3s ease-in-out;
 }
+
+.card__img img:hover {
+    transform: scale(1.1);
+}
+
 .card__info {
-    /* background: blue; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin-right: 80px;
+    transition: all 0.3s ease-in-out;
 }
-.info__name{
+
+.info__name {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
-.card__info  span,
+
+.card__info span,
 .info__name p {
     font-family: 'EncodeSans-SemiBold', sans-serif;
     font-size: 14px;
+    transition: color 0.3s ease-in-out;
 }
-.info__name small{
+
+.info__name small {
     font-size: 10px;
     font-family: "EncodeSands-Regular";
     color: var(--color-3);
 }
+
 .card__select {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: space-between;
+    transition: all 0.3s ease-in-out;
 }
-.card__quantity{
+
+.card__quantity {
     width: 85px;
     height: 28px;
     background: var(--color-1);
@@ -101,33 +126,39 @@ hr{
     flex-direction: row;
     justify-content: space-around;
     align-content: center;
+    transition: all 0.3s ease-in-out;
 }
-.card__quantity span{
+
+.card__quantity span {
     font-family: 'EncodeSans-SemiBold', sans-serif;
     font-weight: 800;
     color: var(--color-5);
     padding-top: 2.5px;
-
 }
 
-.shipping p{
+.shipping p {
     color: var(--color-2);
     font-size: 14px;
     font-family: 'EncodeSans-Regular', sans-serif;
+    transition: color 0.3s ease-in-out;
 }
+
 h2 {
     font-family: "EncodeSands-SemiBold";
     font-size: 14px;
     margin: 2px 0 16px 0;
     font-weight: 100;
     color: var(--color-1);
+    transition: color 0.3s ease-in-out;
 }
 
 .dropdown {
     position: relative;
     display: inline-block;
     width: 100%;
+    transition: all 0.3s ease-in-out;
 }
+
 .dropdown__button {
     background-color: var(--color-7);
     border-radius: 5px;
@@ -139,7 +170,9 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
+
 .dropdown-content {
     display: none;
     position: absolute;
@@ -148,24 +181,30 @@ h2 {
     z-index: 1;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    transition: all 0.3s ease-in-out;
 }
-.dropdown-content div:last-child{
+
+.dropdown-content div:last-child {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
+
 .dropdown-content div {
     color: var(--color-1);
     padding: 12px 16px;
     display: block;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
+
 .dropdown-content div:hover {
     background-color: var(--color-1);
     color: var(--color-5);
     cursor: pointer;
 }
+
 .dropdown:hover .dropdown-content {
     display: block;
-    width: 100%
+    width: 100%;
 }
 
 .dropdown:hover .dropdown__button {
@@ -174,11 +213,10 @@ h2 {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 }
-.dropdown:hover .dropdown__button .shopping__option{
+
+.dropdown:hover .dropdown__button .shopping__option {
     filter: invert(1);
 }
-
-
 /* .paymethod {
     position: relative;
     background: var(--color-7); 
@@ -229,16 +267,16 @@ h2 {
 .built__subtotal {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 70px;
 }
-
 
 /* Footer */
 .footer {
     position: fixed;
     bottom: 0;
     left: 50%;
-    transform: translateX(-50%); 
-    width: 335px; 
+    transform: translateX(-50%);
+    width: 335px;
     height: 56px;
     background: var(--color-1);
     border-radius: 40px;
@@ -248,10 +286,17 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.3s ease-in-out;
 }
-.footer a{
+
+.footer a {
     text-decoration: none;
     color: var(--color-5);
+    transition: color 0.3s ease-in-out;
 }
 
-
+.footer:hover {
+    background-color: var(--color-2);
+    color: var(--color-1);
+    transition: all 0.3s ease-in-out;
+}

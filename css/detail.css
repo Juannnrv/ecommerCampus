@@ -6,22 +6,70 @@
     box-sizing: border-box;
 }
 
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes grow {
+    from {
+        transform: scale(0.9);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
 .main {
     /* background: red; */
     padding: var(--space-layout-padding-lr);
     margin-top: var(--space-layout-padding-t);
+    animation: fadeIn 1s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
+
 .main__section {
     width: 100%;
     /* background: green; */
-
+    transition: all 0.3s ease-in-out;
 }
+
 .article__product {
     display: flex;
     flex-direction: row;
     justify-content: center;
     position: relative;
+    animation: fadeIn 1s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
+
 .product__image {
     /* background: blue; */
     display: flex;
@@ -31,19 +79,31 @@
     width: var(--layout-image-width-detail);
     height: var(--layout-image-height-detail);
     border-radius: 20px;
+    animation: fadeIn 1s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
-.product__image__item{
+
+.product__image__item {
     flex: 1;
     min-width: 98%;
     margin: 0 10px;
     /* background-color: purple; */
     height: var(--layout-image-height-detail);
+    animation: fadeIn 1s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
-.product__image__item img{
+
+.product__image__item img {
     width: var(--layout-image-width-detail);
     height: var(--layout-image-height-detail);
     object-fit: contain;
+    transition: transform 0.3s ease-in-out;
 }
+
+.product__image__item img:hover {
+    transform: scale(1.05);
+}
+
 .product__menu {
     /* background: violet; */
     width: 100%;
@@ -51,42 +111,73 @@
     display: flex;
     justify-content: space-between;
     padding: 15px 15px 0 15px;
+    animation: fadeIn 1s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.product__menu img {
+    transform: filter 0.3s ease-in-out;
+}
+.product__menu img:hover {
+    filter: brightness(0.7) sepia(1) saturate(2) hue-rotate(110deg);
 }
 
 /* Article detail */
 .article__detail {
     /* background: red; */
+    transition: all 0.3s ease-in-out;
 }
+
 .detail__head {
     margin-top: 20px;
     /* background: green; */
     display: flex;
     justify-content: space-between;
     align-items: center;
+    animation: fadeIn 1s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
-.detail__head h1{
+
+.detail__head h1 {
     font-family: "EncodeSands-SemiBold";
     font-size: 28px;
+    animation: fadeIn 1s ease-in-out;
 }
+
 .product__select {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 18px;
+    animation: fadeIn 1s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
-.product__select span{
+.product__select img:hover{
+    transform: scale(1.2);
+    filter: brightness(0.7) sepia(1) saturate(2) hue-rotate(110deg);
+}
+.product__select span {
     font-family: "EncodeSands-Bold";
 }
+
 .detail__score {
     display: flex;
     gap: 5px;
     align-items: center;
+    animation: fadeIn 1s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
-.detail__score span{
+
+.detail__score span {
     color: var(--color-3);
 }
-.detail__score a{
+
+.detail__score a {
     text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.detail__score a:hover {
+    color: var(--color-1);
 }
 
 /* Information */
@@ -95,15 +186,27 @@
     width: 85%;
     margin-top: 10px;
     color: var(--color-3);
+    animation: fadeIn 1s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
-.product__information strong{
+
+.product__information strong {
     color: var(--color-2);
 }
-.product__information + hr{
+.product__information strong:hover {
+    color: var(--color-1);
+}
+
+.product__information + hr {
     margin-top: 10px;
     box-shadow: 0 1px 2px var(--color-3);
     height: 1px;
     border-style: none;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.product__information + hr:hover {
+    box-shadow: 0 2px 4px var(--color-2);
 }
 
 /* Custom */
@@ -112,19 +215,55 @@
     /* background: red; */
     display: flex;
     justify-content: space-between;
+    animation: fadeIn 1s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.product__size h5 {
+    font-size: 20px;
+    margin-bottom: 10px
+}
+.product__size_img {
+    display: flex;
+    gap: 7px;
+}
+.product__size_img img {
+    transition: filter 0.3s ease-in-out;
+    margin-bottom: 70px;
+}
+.product__size_img img:hover {
+    filter: invert();
+    transform: scale(1.2);
+}
+.product__color h5 {
+    font-size: 20px;
+    margin-bottom: 10px
+}
+.product__color_img {
+    display: flex;
+    gap: 7px;
+}
+.product__color_img img {
+    transform: all 0.3s ease-in-out;
+}
+.product__color_img img:hover {
+    transform: scale(1.2);
 }
 .product__size,
 .product__color {
     margin-top: 5px;
     font-family: "EncodeSands-Bold";
 }
+
 /* Footer */
 .footer {
     position: fixed;
     bottom: 10px;
     width: 100%;
     padding: var(--space-layout-padding-lr);
+    animation: slideInFromLeft 1s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
+
 .footer__ul {
     background: var(--color-4);
     height: 55px;
@@ -133,12 +272,16 @@
     justify-content: space-evenly;
     align-items: center;
     border-radius: 40px;
+    animation: fadeIn 1s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
-.footer__ul li{
+
+.footer__ul li {
     list-style: none;
     display: flex;
 }
-.footer__ul li a{
+
+.footer__ul li a {
     display: flex;
     font-family: "EncodeSands-Bold";
     font-weight: 900;
@@ -148,15 +291,27 @@
     text-decoration: none;
     gap: 5px;
     color: var(--color-5);
+    transition: color 0.3s ease-in-out;
 }
-.footer__ul li a img{
+
+.footer__ul li a:hover {
+    color: var(--color-1);
+}
+
+.footer__ul li a img {
     width: 25px;
+    transition: transform 0.3s ease-in-out;
 }
+
+.footer__ul li a img:hover {
+    transform: scale(1.2);
+}
+
 .footer__ul span sub {
     font-family: "EncodeSands-Medium";
 }
-.footer__ul li a sub{
+
+.footer__ul li a sub {
     text-decoration: line-through;
     font-weight: 10;
 }
-

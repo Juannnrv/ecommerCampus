@@ -48,7 +48,7 @@ export const sizeProductDetail = async({data : dataUpdate} = res) => {
     <article class="product__custom">
         <div class="product__size">
             <h5>Choose Size</h5>
-            <div>
+            <div class="product__size_img">
                 <img id="s" src="../storage/img/s.svg">
                 <img id="m" src="../storage/img/m.svg">
                 <img id="l" src="../storage/img/l.svg">
@@ -57,7 +57,7 @@ export const sizeProductDetail = async({data : dataUpdate} = res) => {
         </div>
         <div class="product__color">
             <h5>Color</h5>
-            <div>
+            <div class="product__color_img">
                 <img src="../storage/img/1.svg">
                 <img src="../storage/img/2.svg">
                 <img src="../storage/img/3.svg">
