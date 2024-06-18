@@ -1,15 +1,12 @@
-import { shoppingProduct } from "./module/checkout";
-import { getProductById } from "./module/detail";
+import { shoppingProduct } from "./components/carrito.js";
+import { getAllItemsToBuy } from "./module/checkout.js";
+
 
 let article__clothes_shop = document.querySelector("#article__clothes_shop");
 
 
-
 addEventListener("DOMContentLoaded", async(e) => {
-    let params = new URLSearchParams(location.search);
-    let id = params.get("id");
-    
-    let info = JSON.parse(localStorage.getItem(id));
+    let info = await getAllItemsToBuy();
 
     article__clothes_shop.innerHTML = await shoppingProduct(info);
 })

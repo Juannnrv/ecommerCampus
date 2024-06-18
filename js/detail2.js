@@ -1,4 +1,5 @@
 
+
 import { galleryCategory } from "./components/gallery.js";
 import { descriptionProductDetail, sizeProductDetail, titleProductDetail, valueProductDetail } from "./components/section.js";
 import { getProductById } from "./module/detail.js";
@@ -35,6 +36,13 @@ addEventListener("DOMContentLoaded", async(e)=>{
         //     ...dataUpdate
         // } = data;
         // console.log(dataUpdate);
+
+        let footer = document.querySelector(".footer")
+        footer.addEventListener("click", e => {
+            let products = JSON.parse(localStorage.getItem(id))
+            products["addedToCar"] = true;
+            sessionStorage.setItem(id, JSON.stringify(products));
+        })
         
         let s = document.querySelector("#s")
         let m = document.querySelector("#m")
