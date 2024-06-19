@@ -11,9 +11,9 @@ export const titleProductDetail = async ({data : dataUpdate} = res  ) => {
             </div>
         </div>
         <div class="detail__score">
-            ${new Array(parseInt(dataUpdate.product_star_rating)).fill(`<img src="../storage/img/star.svg">`).join('')}
-            <span>${dataUpdate.product_star_rating}</span>
-            <p><a href="${dataUpdate.product_url}">(${dataUpdate.product_num_ratings} reviews)</a></p>
+            ${dataUpdate.product_star_rating  !== null ? new Array(parseInt(dataUpdate.product_star_rating)).fill(`<img src="../storage/img/star.svg">`).join('') : ""}
+            <span>${dataUpdate.product_star_rating !== null ?  dataUpdate.product_star_rating : ""}</span>
+            <p><a href="${dataUpdate.product_url}">${dataUpdate.product_num_ratings !== null ? `${dataUpdate.product_num_ratings} reviews` : ""}</a></p>
         </div>
     </article>`;
 }

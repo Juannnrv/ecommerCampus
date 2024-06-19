@@ -26,7 +26,7 @@ export const galleryIndex = (res, category) => {
     return plantilla;
 }
 
-export const galleryCategory = ({data: {product_photos}} = res)=>{
+export const galleryCategory = async({data: {product_photos}} = res)=>{
 
     return /*html*/`
     <article class="article__product">

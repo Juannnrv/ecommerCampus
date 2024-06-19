@@ -39,16 +39,13 @@ input__search.addEventListener("change", async e => {
   let res = await getAllProductName(datasearch)
   main__article.innerHTML = galleryIndex(res, params.get('id'));
 
-  // let { data : {products} } = res;
-  // let asin = products.map(value => {return {id : value.asin}});
-  
-  // let process = new Promise((resolve, reject) => {
-  //   for (let i = 0; i < asin.length; i++) {
-  //     if (localStorage.getItem(asin[i].id)) continue;
-  //     let data = await getProductById(asin[i]);
-  //     localStorage.setItem(asin[i].id, JSON.stringify(data));
-  //   }
-  //   resolve({message: "Data found succesfully"})
-  //   })
-  //   Promise.race([process]).then(res => {console.log(res);})
+  let proceso = new Promise(async(resolve, reject)=>{
+        for (let i = 0; i < asin.length; i++) {
+            if(localStorage.getItem(asin[i].id)) continue;
+            let data = await getProductId(asin[i])
+            localStorage.setItem(asin[i].id, JSON.stringify(data))
+        }
+        resolve({message: "Datos buscados correctamente" });
+    })
+    Promise.all([proceso]).then(res => {console.log(res);})
   });
