@@ -32,11 +32,6 @@ hr {
     transition: all 0.3s ease-in-out;
 }
 
-.header__top:hover {
-    transform: scale(1.02);
-    transition: transform 0.3s ease-in-out;
-}
-
 /* Main */
 .main__section {
     width: 100%;
@@ -45,14 +40,12 @@ hr {
 
 .article__clothes {
     height: 310px;
-    overflow: scroll;
+    overflow-y: scroll;
     width: 100%;
-    overflow: scroll;
     transition: all 0.3s ease-in-out;
 }
 
 .clothes__product {
-    overflow: scroll;
     margin-bottom: 24px;
     transition: all 0.3s ease-in-out;
 }
@@ -289,7 +282,6 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 0.3s ease-in-out;
 }
 
 .footer a {
@@ -299,7 +291,5 @@ h2 {
 }
 
 .footer:hover {
-    background-color: var(--color-2);
-    color: var(--color-1);
     transition: all 0.3s ease-in-out;
 }

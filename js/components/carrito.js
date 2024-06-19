@@ -5,7 +5,7 @@ export const shoppingProduct = () => {
     Object.keys(sessionStorage).forEach((key) => {
         const res = JSON.parse(sessionStorage.getItem(key)); 
 
-        plantilla += `
+        plantilla += /*html*/`
         <div class="clothes__product">
             <div class="product__card">
                 <div class="card__img">
@@ -21,23 +21,40 @@ export const shoppingProduct = () => {
                 <div class="card__select">
                     <img src="../storage/img/Punticos.svg">
                     <div class="card__quantity">
-                        <img id="menos" src="../storage/img/minuswhite.svg">
-                        <span id="num">${res.data.product_quantity}</span>
-                        <img id="mas" src="../storage/img/pluswhite.svg">
+                        <img class="menos" src="../storage/img/minuswhite.svg" data-id="${res.data.asin}">
+                        <span class="num" data-id="${res.data.asin}">${res.data.product_quantity}</span>
+                        <img class="mas" src="../storage/img/pluswhite.svg" data-id="${res.data.asin}">
                     </div>
                 </div>
             </div>  
         </div>`;
     });
-
+    
     return plantilla; 
 };
 
 export const built__car = async(res) => {
+    if (!res || !res.data) {
+        return /*html*/`
+        <div class="built__total">
+            <p id="items">Total (0 items)</p>
+            <span id="price">$0.00</span>
+        </div>
+        <div class="built__fee">
+            <p>Shipping Fee</p>
+            <span>$0.00</span>
+        </div>
+        <hr>
+        <div class="built__subtotal">
+            <p>Sub Total</p>
+            <span id="total">$0.00</span>
+        </div>`;
+    }
+
     return /*html*/`
     <div class="built__total">
-        <p id="items" >Total (${res.data.product_quantity} items)</p>
-        <span id="price" >${res.data.product_price}</span>
+        <p id="items">Total (${res.data.product_quantity || 0} items)</p>
+        <span id="price">${parseFloat(res.data.product_price.replace("$", "") || 0)}</span>
     </div>
     <div class="built__fee">
         <p>Shipping Fee</p>
@@ -46,6 +63,6 @@ export const built__car = async(res) => {
     <hr>
     <div class="built__subtotal">
         <p>Sub Total</p>
-        <span id="total" >${res.data.product_price}</span>
+        <span id="total">${res.data.product_price || '$0.00'}</span>
     </div>`;
 }

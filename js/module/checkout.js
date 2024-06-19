@@ -1,13 +1,13 @@
 
 
 export const getAllItemsToBuy = async () => {
-    let products = [];
-    let keys = Object.keys(sessionStorage);
-    let exclude = keys[0]
-    
-    keys.filter(item => item !== exclude).forEach(index => {
-        products.push(JSON.parse(sessionStorage.getItem(index)));
-    });
-    
-    return products;
+    sessionStorage.removeItem("IsThisFirstTime_Log_From_LiveServer");
+
+    let params = new URLSearchParams(location.search);
+    let id = params.get('id');
+
+    let key = JSON.parse(sessionStorage.getItem(id));
+    // console.log(key);
+
+    return key;
 };
