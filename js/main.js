@@ -42,7 +42,7 @@ input__search.addEventListener("change", async e => {
   let proceso = new Promise(async(resolve, reject)=>{
         for (let i = 0; i < asin.length; i++) {
             if(localStorage.getItem(asin[i].id)) continue;
-            let data = await getProductId(asin[i])
+            let data = await getProductById(asin[i])
             localStorage.setItem(asin[i].id, JSON.stringify(data))
         }
         resolve({message: "Datos buscados correctamente" });

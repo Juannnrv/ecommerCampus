@@ -1,9 +1,15 @@
 
 export const shoppingProduct = () => {
     let plantilla = ''; 
+    
+    if (Object.keys(sessionStorage).length === 0) {
+        return /*html*/ `
+        <h1>Empty Car 🛒. . .</h1>
+        <style>h1 {color: var(--color-1); font-size: 40px; text-align: center; margin-top: 100px;}</style>`;
+    }
 
     Object.keys(sessionStorage).forEach((key) => {
-        const res = JSON.parse(sessionStorage.getItem(key)); 
+        const res = JSON.parse(sessionStorage.getItem(key));
 
         plantilla += /*html*/`
         <div class="clothes__product">
@@ -14,7 +20,7 @@ export const shoppingProduct = () => {
                 <div class="card__info">
                     <div class="info__name">
                         <p>${res.data.product_title.slice(0, 50)}...</p>
-                        <small>Category</small>
+                        <a href="${res.data.product_url}" >Go to Amazon</a>
                     </div>
                     <span>$${parseFloat(res.data.product_price.replace("$", "")).toFixed(2)}</span>
                 </div>

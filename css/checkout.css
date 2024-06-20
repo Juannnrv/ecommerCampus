@@ -87,6 +87,14 @@ hr {
     flex-direction: column;
     gap: 5px;
 }
+.info__name a {
+    color: var(--color-1);
+    font-family: 'EncodeSans-SemiBold', sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+
+}
 
 .card__info span {
     margin-top: 5px;
@@ -269,7 +277,7 @@ h2 {
 /* Footer */
 .footer {
     position: fixed;
-    bottom: 0;
+    bottom: 15px;
     left: 50%;
     transform: translateX(-50%);
     width: 335px;

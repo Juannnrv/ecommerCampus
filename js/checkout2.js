@@ -13,11 +13,6 @@ addEventListener("DOMContentLoaded", async (e) => {
     article__clothes_shop.innerHTML = await shoppingProduct(info); 
     built_info.innerHTML = await built__car(info);
     
-    let back = document.querySelector("#back");
-    back.addEventListener("click", (e) => {
-        window.location.href = "detail.html";
-    })
-    
     const updateCar = () => {
         const updateQuantity = () => {
             let totalQuantity = 0; 
