@@ -76,6 +76,7 @@
 .header__login img {
     width: 100%;
     object-fit: cover;
+    border-radius: 100%;
 }
 
 .nav {
