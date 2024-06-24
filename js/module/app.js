@@ -29,6 +29,7 @@ export const getAllCategory = async() => {
     return data;
 }
 
+document.querySelector(".carga").style.display = "block";
 export const getRamdonIndex = async(page = 700) => {
     console.log("Waiting...")
     page = Math.random()*(page/20);
@@ -43,5 +44,8 @@ export const getRamdonIndex = async(page = 700) => {
 
     let res = await fetch(url, options);
     let data = await res.json();
+
+    document.querySelector(".carga").style.display = "none";
+
     return data;
-} 
+}
